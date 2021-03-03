@@ -1,0 +1,8 @@
+[
+  {
+    "remote":       "SODP-Experimentations",
+    "repository":   "device-sony-customization",
+    "target_path":  "device/sony/customization",
+    "branch":       "lineage-18.1"
+  }
+]

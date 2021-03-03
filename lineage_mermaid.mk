@@ -12,13 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/lineage_mermaid.mk \
-                     $(LOCAL_DIR)/lineage_mermaid_dsds.mk
+# Inherit device parts
+$(call inherit-product, device/sony/mermaid/aosp_i3213.mk)
 
-COMMON_LUNCH_CHOICES += \
-    lineage_mermaid-eng \
-    lineage_mermaid-userdebug \
-    lineage_mermaid-user \
-    lineage_mermaid_dsds-eng \
-    lineage_mermaid_dsds-userdebug \
-    lineage_mermaid_dsds-user
+# Override Product Name
+PRODUCT_NAME := lineage_mermaid
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := mermaid
